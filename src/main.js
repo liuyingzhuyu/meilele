@@ -6,7 +6,7 @@ import App from './App'
 import router from './router'
 
 //引入mint-ui
-import MintUI,{ Tabbar, TabItem,TabContainer, TabContainerItem }  from 'mint-ui'
+import MintUI,{  Swipe, SwipeItem,Lazyload  }  from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
 //引入icon
@@ -15,10 +15,9 @@ import "./assets/iconfont/iconfont.css"
 
 
 Vue.use(MintUI)
-Vue.component(Tabbar.name, Tabbar);
-Vue.component(TabItem.name, TabItem);
-Vue.component(TabContainer.name, TabContainer);
-Vue.component(TabContainerItem.name, TabContainerItem);
+Vue.use(Lazyload);
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
 //console.log(MintUI)
 Vue.config.productionTip = false
 

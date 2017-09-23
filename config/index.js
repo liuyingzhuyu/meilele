@@ -27,7 +27,16 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+    	  '/dubbo_api': {//这里是我配置的名字
+                    target: 'http://m.meilele.com', //这个路径是我代理到本地tp框架里面
+            　　　　 changeOrigin: true, //开启代理
+             　　　　pathRewrite: { '^/dubbo_api': '/dubbo_api' }  //这里重写路径/run就代理到对应地址
+            　　}
+
+    	
+    	
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
